@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Gear</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="upper">
+                <div class="logo"><img src="./Gray and Green Minimalist Outdoor Design Logo.png" alt="">Larana</div>
+                <div class="search">
+                    <label for="search"><ion-icon name="search-outline"></ion-icon></label>
+                    <input type="search" name="search" id="search" placeholder="Search">
+                </div>
+                <div class="admin">
+                    <button>Profile</button>
+                </div>
+                <div class="myshop"><button> My Shop</button></div>
+                <div class="analytics"><button>Business Analytics</button></div>
+
+            </div>
+            <div class="lower">
+                <div class="profile">
+                    <img src="https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_640.png" alt="">
+                    <div class="credentials">
+                        <p>Name</p>
+                        <p>Email address</p>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="hide">
+            <div class="adminData">
+                    
+            </div>
+            <div class="content">
+                <div class="viewShop">
+                    <button id="view">View Shop</button>
+                </div>
+                <div class="back">
+                    <button id="back"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                    <div class="head">
+                        <p>Back to product list</p>
+                        <h3>Add New Product</h3>
+                    </div>
+                </div>
+                <div class="desc">
+                    <form class="addProduct">
+                        <div class="left">
+                            <h3>Description</h3>
+                                Product
+                                <label for="productName">Product Name*</label>
+                                <input type="text" name="productName" id="productName" placeholder="Product name?" required>
+                                <label for="productDescription">Product Description*</label>
+                                <textarea name="productDescription" id="productDescription" cols="30" rows="10" required>Describe the product</textarea>
+                                <h3>Category</h3>                    
+                                <label for="productCategory">Product Category*</label>
+                                <select name="productName" id="productCategory" placeholder="Product Category" required>
+                                    <option value="Hiking">Hiking Gear</option>
+                                    <option value="Camping">Camping Gear</option>
+                                </select>                        
+                                <h3>Inventory</h3>
+                                <label for="quantity">Quantity*</label>
+                                <input type="number" name="quantity" id="quantity" placeholder="How many?" required>
+                                <label for="SKU">SKU(Optional)</label>
+                                <input type="text" name="SKU" id="SKU" placeholder="SKU?">
+                                <label for="variant">Variant</label>
+                                <input type="text" name="variant" id="variant" placeholder="Add Variant">
+        
+                        </div>
+                        <div class="right">
+                            <h3>Product Images</h3>      
+                            <input type="file" id="fileInput" accept="image/*" />
+                            <button onclick="newImage.uploadFile()">Upload</button>                            
+                                <h3>Shipping & Delivery</h3>
+                                <label for="weight">Item's weight</label>
+                                <input type="number" name="weight" id="weight">
+                                <h3>Package Size</h3>
+                                <div class="size">
+                                    <label for="length">Length</label>
+                                    <input type="number" name="length" id="length">
+                                    <label for="Weight">Weight</label>
+                                    <input type="number" name="Weight" id="Weight">
+                                    <label for="width">Width</label>
+                                    <input type="number" name="width" id="width">
+                                </div>
+        
+                                <h3>Pricing</h3>
+                                <div class="price">
+                                    <div class="current">
+                                        <p>Price</p>
+                                        <label for="Price">Ksh</label>
+                                        <input type="number" name="Price" id="Price">
+                                        <br>
+                                    </div>
+        
+                                    <div class="discounted">
+                                        <p>Compare Price</p>
+                                        <label for="discount">Ksh</label>
+                                        <input type="number" name="discount" id="discount">
+                                        <br>
+                                    </div>
+        
+                                </div>    
+                            <div class="update">
+                                <button id="discard">Discard</button>
+                                <input type="submit" value="Add Product" id="add">
+                            </div>
+    
+                        </div>
+                    </form>
+    
+    
+                   
+                </div>
+                
+            </div>
+
+        </div>  
+        <div id="result"></div>     
+
+    </div>
+ <script src="./dist/main.js"></script>
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
